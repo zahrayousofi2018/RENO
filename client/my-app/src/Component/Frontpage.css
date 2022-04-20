@@ -1,0 +1,26 @@
+.frontpage__text {
+  color: white;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.frontpage__message {
+  font-size: 3rem;
+  margin-right: 20px;
+  color: white;
+  padding-left: 40px;
+}
+
+.frontpage__container {
+  background-image: url("./896669.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.Signup {
+  margin-left: 40px;
+}
+
+.Login {
+  margin-left: 10px;
+}/*# sourceMappingURL=Frontpage.css.map */
