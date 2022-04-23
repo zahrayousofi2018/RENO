@@ -8,11 +8,11 @@ function SignUp () {
        </div>
        <div>
            <h1>Already have an account?</h1>
-           <button>Sign in</button>
+           <button>Login in</button>
        </div>
        <div>
            <h1>Create an account</h1>
-           <button></button>
+           <button>Sign in</button>
        </div>
    </div>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Navbar.scss"
 import {Link} from "react-router-dom";
+// import FontAwesomeIcon from 'fontAwesomeIcon'
 
 
 function Navbar() {
@@ -8,17 +9,22 @@ function Navbar() {
       <div className="navbar">
      
         <div className="nav__container">
+          <Link to="/" className="HomePage">
         <h1 className= "reno"> RENO</h1>
+        {/* <FontAwesomeIcon icon="fa-solid fa-house-building" /> */}
+        </Link>
         </div>
 
         <div className="nav__container">
-       <Link to="/HomeOwner" className="HomeOwner__Link">
+       <Link to="/HomeOwner" className="HomeOwner__link">
         <h2 className="dashboard"> HomeOwner</h2>
        </Link>
         </div>
 
         <div >
+          <Link to="/Vendor" className="Vendor__link">
         <h2 className="dashboard">Vendor</h2>
+        </Link>
         </div>
 
         {/* <div className="nav__container">

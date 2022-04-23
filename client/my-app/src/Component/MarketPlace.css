@@ -1,0 +1,18 @@
+.MarketPlace__container {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.marketplace__steps {
+  border-radius: 100%;
+  background-color: #3366BB;
+  border-color: #3366BB;
+  color: white;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.marketplace__steps__div {
+  display: flex;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=MarketPlace.css.map */

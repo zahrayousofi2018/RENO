@@ -11,11 +11,12 @@ function FrontPage() {
        <h3 className="frontpage__text">Property Management Software</h3>
 
        <h1 className="frontpage__message">Modernize how you renovate your home! </h1>
-       <Link to="/SignUp" className="SignUp__link">
-       <button className="SignUp">Sign up</button>
+       <Link to="/HomeOwner" className="SignUp__link">
+       <button className="SignUp">Landlord</button>
        </Link>
-       <button className="Login">Login</button>
-     
+       <Link to="/Vendor" className="Vendor__link">
+       <button className="Login">Vendor</button>
+       </Link>
       </div>
     );
   }

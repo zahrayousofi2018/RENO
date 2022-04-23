@@ -1,60 +1,88 @@
 import React, {Component} from 'react';
 import './HomeOwner.scss'
+import {Link} from "react-router-dom";
+import {Switch} from "react-router-dom";
+import MarketPlace from './MarketPlace';
+
 // import Dropdown from 'react-dropdown';
-// function HomeOwner () {
 
     class HomeOwner extends Component {
-    render(){
+  
+    render(){  
     return (  
-    <div>
-<div>
-    HomeOwner WorkSpace 
-</div>
-    <div> 
-       <h4>Home</h4>
-       <h4>Marketplace</h4>
-       <h4>Inbox</h4>
+    // <div>
+    <div className="HomeOwner__main__div">
+
+    <div className="navigation">
+        <Link to="/"><img alt="logo" src='./RENO_LOGO.jpg'/></Link>
+
+        {/* <Link><h4>Dashboard</h4></Link> */}
+        {/* <Link to="/MarketPlace" className="MarketPlace__link"> <h4>Marketplace</h4></Link> */}
+        {/* <Link> <h4>Quotes </h4></Link> */}
     </div>
 
-    <div>
-       <h4>Properties</h4>
-       <h4>Preferred Vendors</h4>
-       <h4>Quote Requests</h4>
+    <div className="dyanmicPageContent">
+        <Switch>
+            {/* <Route path="/MarketPlace" component={MarketPlace}/> */}
+            <MarketPlace/>
+            {/* <Route path="/home" component={Home}/>  */}
+        </Switch>
     </div>
 
-<div>
-   <h4>Welcome to the Vendor MarketPlace</h4>
-   <p>Search for the vendors that serve your properties.</p>
-   {/* <input>Search for a service</input>
-
-   <input>Add property</input> */}
-   <h4>Property Name</h4>
-</div>
-
-<div> 
-    <input className="search__box" type="text" placeholder= "Unit" ></input>
-    <input className="search__box" type="text" placeholder= "Address" ></input>
-    <input className="search__box" type="text" placeholder= "Address" ></input>
-    
-    {/* <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown> */}
-   
-</div>
-
- 
-    </div>
+ </div>
+     
 
     )
 }
 }
 
 export default HomeOwner 
+
+
+
+//  <div className="HomeownerPage">
+//     <div className="navigation">
+//         <Link>Reno</Link>
+//         <Link>Home</Link>
+//         <Link>Marketplace</Link>
+//         <Link>Inbox</Link>
+//         <Link>Properties</Link>
+//         <Link>Quotes</Link>
+//     </div>
+
+//     <div className="dyanmicPageContent">
+//         <Switch>
+//             <Route path="/reno" component={Reno}/>
+//             <Route path="/home" component={Home}/> 
+//             ....
+//         </Switch>
+//     </div>
+// <div> 
+
+//   <div className="nav__bar">
+//         Reno 
+//     </div>
+
+//      <div className="marketplace"> 
+//         <h4>Home</h4>
+//         <Link to="/MarketPlace" className="MarketPlace">
+//         <h4>Marketplace</h4>
+//        </Link>
+//      </div>
+
+//     <div>
+//             <h4>Inbox</h4>
+//        <h4>Properties</h4>
+//        <h4>Quote Requests</h4>
+//     </div>
+//   </div>
+//   <div className="homeOwner__container">
+//         <div className="dashboard">
+//         Dashboard 
+//        </div> 
+   
+
+//   </div> 
+
+//    </div> 
+
