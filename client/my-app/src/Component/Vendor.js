@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import axios from 'axios';
+// import axios from 'axios';
 
 class Vendor extends Component {
    render() {
@@ -16,7 +16,7 @@ class Vendor extends Component {
     </div>
         
         <div>
-          <h1>Unit Details </h1>
+          <h1>Job Details </h1>
           
 
         </div>
