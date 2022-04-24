@@ -6,11 +6,16 @@
     "city": "Toronto",
     "province": "Ontario",
     "country": "Canada",
+    "propertytype": "condo",
+    "rooms": "2 Bedroom" ,
+    "bathroom": "2 bathroom",
     "sqft": "700",
-    "comments": "Unit needs 1 quote of paint",
     "color": "white",
+    "coat": "2",
+    "comments": "Unit needs 1 quote of paint",
     "quote": "1000"
    },
+
 
    {  "id": "879765",
       "jobtype":"paint",
@@ -19,9 +24,12 @@
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
+      "rooms": "2 Bedroom" ,
+      "bathroom": "2 bathroom",
       "sqft": "1400",
-      "comments": "Unit needs 2 quotes of paint",
       "color": "white",
+      "coat": "1",
+      "comments": "Unit needs 2 quotes of paint",
       "quote": "3000"
      },
 
@@ -32,9 +40,12 @@
       "city": "Toronto",
       "province": "Ontario",
       "country": "Canada",
+      "rooms": "2 Bedroom" ,
+      "bathroom": "2 bathroom",
       "sqft": "1300",
-      "comments": "Unit needs 1 quote of paint",
       "color": "white",
+      "coat": "2",
+      "comments": "Unit needs 1 quote of paint",
       "quote": "1000"
      }
 
