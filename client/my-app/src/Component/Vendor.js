@@ -60,56 +60,90 @@ class Vendor extends Component {
         
         <div>
           <h1>Job Details </h1>
-           
-           <ul>
-             <h3>Unit</h3>
+           <tr className="joblist__row">
+           <td className="joblist__unit">
+
+             <h4>Unit</h4>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].unit : 'array empty'}
-          </ul>
-          <ul>
+          
+          </td>
+          <td>
             <h3>Address</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].address : 'array empty'}
-           </ul>
+           </td>
 
-           <ul>
+          <td>
            <h3>City</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].city : 'array empty'}
-           </ul>
+           </td>
 
-           <ul>
+           <td>
            <h3>Province</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].province : 'array empty'}
-           </ul>
+           </td>
 
+            <td>
            <h3>Country</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].country : 'array empty'}
+           </td>
+
+           <td>
 
            <h3>Rooms</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].rooms: 'array empty'}
 
+           </td>
+
+           <td>
+
            <h3>Bathrooms</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].bathrooms: 'array empty'}
+           </td>
 
+           <td>
            <h3>Area</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].sqft: 'array empty'}
+           </td>
+
+           <td>
 
            <h3>Color</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].color: 'array empty'}
+           </td>
+
+           <td>
 
            <h3>Color Coat</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].coat: 'array empty'}
+            </td>
+
+            {/* <td>
 
            <h3>Comments</h3>
            {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].comment: 'array empty'}
+           </td> */}
+
+             <td>
+               <h3>Status</h3>
+             <button type="submit" className="Accept">Accept Job</button>
+       
+
+
+   
+             </td>
+
+             <td>
+             <button type="submit" className="Decline">Decline Job</button>
+             </td>
+
+
+           </tr>
            
         </div>
 
         
      
-        <button type="submit" className="Accept">Accept Job</button>
-        <input  name="quote" className="search__box" type="text" placeholder= "Quote" ></input>
-
-
-        <button type="submit" className="Decline">Decline Job</button>
+     
 
         </form>
       </div>
