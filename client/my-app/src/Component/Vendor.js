@@ -2,32 +2,15 @@ import axios from 'axios';
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import "./Vendor.scss"
+import Vendorlist from "./Vendorlist";
+
 
 
 class Vendor extends Component {
     state ={
         jobsArray: [],
+        filterData: [],
     }
-    
-  // handleChange = (event) => {
-  //   this.setState({[event.target.name]: event.target.value},
- 
-  //    ) };
-
-    //  isAccepted = () => {
-    //    const accept = this.state.accept;
-    //    if(accept === true) {
-    //      return 
-    //    }
-    //    else return false;
-    //  }
-
-    //  isDeclined = () => {
-    //    const decline = this.state.decline;
-    //    if (decline === true) {
-    //      alert("Thank you for reviewing the job! Don't worry next job is on its way")
-    //    }
-    //  }
 
 
    componentDidMount () {
@@ -39,116 +22,146 @@ class Vendor extends Component {
           return response.data
        })
    }
+    
 
-   handleUpload =(e)=> {
-     e.preventDefault()
-     axios.post('http//localhost:9000/reno', {
+    getFilterData = (e) =>  {
+      console.log(e.target.value)
+      if (e.target.value === "Paint") {
+       let filteredData = this.state.jobsArray.filter((data) => {
+          return data.jobtype === "Paint" 
+        })
 
-     })
-   }
+        this.setState({
+          ...this.state,
+          filterData: filteredData
+        })
+      }
+
+      if (e.target.value === "Cleaning") {
+        let filteredData = this.state.jobsArray.filter((data) => {
+           return data.jobtype === "Cleaning" 
+         })
+
+         this.setState({
+          ...this.state,
+          filterData: filteredData
+        })
+       }
+
+       if (e.target.value === "Flooring") {
+        let filteredData = this.state.jobsArray.filter((data) => {
+           return data.jobtype === "Flooring" 
+         })
+
+         this.setState({
+          ...this.state,
+          filterData: filteredData
+        })
+       }
+
+       if (e.target.value === "Inspection") {
+        let filteredData = this.state.jobsArray.filter((data) => {
+           return data.jobtype === "Inspection" 
+         })
+
+         this.setState({
+          ...this.state,
+          filterData: filteredData
+        })
+       }
+
+       if (e.target.value === "Renovation") {
+        let filteredData = this.state.jobsArray.filter((data) => {
+           return data.jobtype === "Renovation" 
+         })
+         this.setState({
+          ...this.state,
+          filterData: filteredData
+        })
+
+       }
+
+      //  if (e.target.value === "Jobs") {
+      //    this.setState({
+      //     ...this.state,
+      //     jobsArray: filteredData
+      //   })
+
+      //  }
+    
+    }
+
+
 
    render() {
        console.log(this.state.jobsArray)
-
+       console.log(this.state.filterData)
     return (
-      <div>
-   <form method="POST" onSubmit= {(e)=> this.handleUpload(e)} >
+      <div className="vendor__main__div">
+
   
-    <div className="navigation">
-        <Link to="/"><img alt="logo" src='./RENO_LOGO.jpg'/></Link>
-     </div>
-        
-        <div>
-          <h1>Job Details </h1>
-           <tr className="joblist__row">
-           <td className="joblist__unit">
-
-             <h4>Unit</h4>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].unit : 'array empty'}
-          
-          </td>
-          <td>
-            <h3>Address</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].address : 'array empty'}
-           </td>
-
-          <td>
-           <h3>City</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].city : 'array empty'}
-           </td>
-
-           <td>
-           <h3>Province</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].province : 'array empty'}
-           </td>
-
-            <td>
-           <h3>Country</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].country : 'array empty'}
-           </td>
-
-           <td>
-
-           <h3>Rooms</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].rooms: 'array empty'}
-
-           </td>
-
-           <td>
-
-           <h3>Bathrooms</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].bathrooms: 'array empty'}
-           </td>
-
-           <td>
-           <h3>Area</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].sqft: 'array empty'}
-           </td>
-
-           <td>
-
-           <h3>Color</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].color: 'array empty'}
-           </td>
-
-           <td>
-
-           <h3>Color Coat</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].coat: 'array empty'}
-            </td>
-
-            {/* <td>
-
-           <h3>Comments</h3>
-           {this.state.jobsArray.length > 1 ? this.state.jobsArray[0].comment: 'array empty'}
-           </td> */}
-
-             <td>
-               <h3>Status</h3>
-             <button type="submit" className="Accept">Accept Job</button>
-       
-
-
-   
-             </td>
-
-             <td>
-             <button type="submit" className="Decline">Decline Job</button>
-             </td>
-
-
-           </tr>
-           
-        </div>
-
-        
-     
-     
-
-        </form>
+      <div className="navigation">
+          <Link to="/"> <h1 className="logo">RENO</h1></Link>
       </div>
+        
+      <div className="vendor__div__container">
+        <h1 className="vendor__dashboard" >Welcome to Vendor Dashboard</h1>
+
+        <h2 className="vendor__subtitle">Select Jobtype</h2>
+        <select onChange={(e) => this.getFilterData(e)}>
+            <option className="vendor__form__option" hidden displayed value="N/A"> Please Select</option>
+            <option onChange={() => this.getFilterData()} className="vendor__form__option" value="Jobs">Jobs</option>
+            <option  className="vendor__form__option" value="Paint" >Paint</option>
+            <option  className="vendor__form__option" value="Cleaning" >Cleaning</option>
+            <option  className="vendor__form__option" value="Flooring" >Flooring</option>
+            <option  className="vendor__form__option" value="Renovation">Full House Renovation</option>
+          </select>
+
+          <tr className="joblist__row">
+          </tr> 
+          {this.state.filterData.length > 0 ? 
+                this.state.filterData.map((elem) => (
+                  <Vendorlist
+                    id={elem.id}
+                    address={elem.address}
+                    unit={elem.unit}
+                    jobtype={elem.jobtype}
+                    city={elem.city}
+                    province={elem.province}
+                    country={elem.country}
+                    propertytype={elem.propertytype}
+                    rooms={elem.rooms}
+                    bathroom={elem.bathroom}
+                    sqft={elem.sqft}
+                    color={elem.color}
+                    coat={elem.coat}
+                    comment={elem.comment}
+                  />
+                ))
+              :
+                this.state.jobsArray.map((elem) => (
+                  <Vendorlist
+                    id={elem.id}
+                    address={elem.address}
+                    unit={elem.unit}
+                    jobtype={elem.jobtype}
+                    city={elem.city}
+                    province={elem.province}
+                    country={elem.country}
+                    propertytype={elem.propertytype}
+                    rooms={elem.rooms}
+                    bathroom={elem.bathroom}
+                    sqft={elem.sqft}
+                    color={elem.color}
+                    coat={elem.coat}
+                    comment={elem.comment}
+                  />
+                ))
+              }
+          </div>
+        </div>
     )
-   }
+  }
 }
 
 export default Vendor;

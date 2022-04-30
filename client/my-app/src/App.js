@@ -5,6 +5,8 @@ import HomeOwner from './Component/HomeOwner'
 import SignUp from './Component/SignUp'
 import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Vendor from './Component/Vendor';
+import Landlordsubmit from './Component/Landlordsubmit';
+import Quote from './Component/Quote'
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
          <Route path="/HomeOwner" component={HomeOwner}/> 
          <Route path="/Vendor" component={Vendor}/>
          <Route path="/SignUp" component={SignUp} />
+         <Route path="/Landlordsubmit" component={Landlordsubmit}/>
+         <Route path="/Quote" component={Quote}/>
         </Switch>
         {/* <SignUp/>  */}
         </BrowserRouter>

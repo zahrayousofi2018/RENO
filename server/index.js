@@ -29,8 +29,8 @@ app.get("/reno", (req, res)=> {
 });
 
 app.post('/reno', (req, res) => {
-    const fullJobData = pullData(data);
-    // let body = res.body;
+    // const fullJobData = pullData(data);
+    let body = req.body;
     
     const newJob = 
     {id: data.length +1,
@@ -52,16 +52,15 @@ app.post('/reno', (req, res) => {
     ...body
    };
 
-   fullJobData.push(newJob);
+   data.push(newJob);
 
-   var jobSrc = JSON.stringify(fullJobData, null, 2);
-   fs.writeFile(data, jobSrc, 'utf8', function (err) {
+   var jobSrc = JSON.stringify(data);
+   fs.writeFile('./data/reno.json', jobSrc, 'utf8', function (err) {
        if (err) throw err;
        console.log('complete');
    })
    res.status(200).send(req.body)
 
- 
      
 });
 

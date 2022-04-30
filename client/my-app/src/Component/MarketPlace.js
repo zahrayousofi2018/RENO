@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './MarketPlace.scss'
 import axios from 'axios'
+import {Link} from "react-router-dom";
 
 class MarketPlace extends Component {
   state = {
@@ -44,7 +45,7 @@ class MarketPlace extends Component {
             city: this.state.city,
             province: this.state.province,
             country: this.state.country,
-            propertytype: this.state.propertytype,
+            propertyType: this.state.propertyType,
             rooms: this.state.rooms,
             bathroom: this.state.bathroom,
             sqft: this.state.sqft,
@@ -62,35 +63,50 @@ class MarketPlace extends Component {
     return (  
         <div className="MarketPlace__container">
             <form method="POST" onSubmit={(e) => this.handleUpload(e)}>
-        <div>
-        <h4>Welcome to the Vendor MarketPlace</h4>
+        <div className="vendor__detail__container">
+        <h4 className="welcome__to__vendor__marketplace">Welcome to the Vendor MarketPlace</h4>
 
-        <p>Search for the vendors that serve your properties.</p>
-        <input value={this.state.jobtype} onChange= {this.handleChange} name="jobtype" className="search__box" type="text" placeholder="Search for a service"></input>
+        <p className="vendor__subtitle">Search for the vendors that serve your properties.</p>
+        <label className="vendor__list" for="catagory">Vendor List</label>
+        <select value={this.state.jobtype} onChange= {this.handleChange} name="jobtype" className="search__box" type="text" placeholder="Category" class="vendor__list__item" id="catagory">
+            <option className="vendor__form__option" hidden displayed value="N/A"> Please Select</option>
+            <option className="vendor__form__option" value="Paint" >Paint</option>
+            <option className="vendor__form__option" value="Flooring" >Flooring</option>
+            <option className="vendor__form__option" value="Inspection">Inspection</option>
+            <option className="vendor__form__option" value="Renovation">Full House Renovation</option>
+            </select>
+     
       
-        <h4>Property Details</h4>
+       </div>
+       <div className="property__detail">
+
+        <h4 >Property Details</h4>
        </div>
      
-       <div> 
-      
+       <div className="input__container"> 
+    
          <input value={this.state.unit} onChange={this.handleChange} name="unit" className="search__box" type="text" placeholder= "Unit" ></input>
+
+
+
          <input value={this.state.address} onChange={this.handleChange} name="address" className="search__box" type="text" placeholder= "Address" ></input>
          <input value={this.state.city} onChange={this.handleChange} name="city" className="search__box" type="text" placeholder= "city" ></input>
-         <input value={this.state.province} onChange={this.handleChange} name="province" className="search__box" type="text" placeholder= "province" ></input>
-         <input value={this.state.country} onChange={this.handleChange} name="country" className="search__box" type="text" placeholder= "country" ></input>
+         <input value={this.state.province} onChange={this.handleChange} name="province" className="search__box" type="text" placeholder= "Province" ></input>
+         <input value={this.state.country} onChange={this.handleChange} name="country" className="search__box" type="text" placeholder= "Country" ></input>
          <input value={this.state.propertyType} onChange={this.handleChange} name="propertyType" className="search__box" type="text" placeholder= "Property Type" ></input>
          <input value={this.state.rooms} onChange={this.handleChange} name="rooms" className="search__box" type="text" placeholder= "# Rooms" ></input>
          <input value={this.state.bathroom} onChange={this.handleChange} name="bathroom" className="search__box" type="text" placeholder= "# Bathrooms" ></input>
          <input value={this.state.sqft} onChange={this.handleChange} name="sqft" className="search__box" type="text" placeholder= "Area sq.ft" ></input>
-         <input value={this.state.paintColor} onChange={this.handleChange} name="paintColor" className="search__box" type="text" placeholder= "paint color" ></input>
-         <input value={this.state.paintCoat} onChange={this.handleChange} name="paintCoat" className="search__box" type="text" placeholder= "# coat of paint" ></input>
-         <textarea value={this.state.comment} onChange={this.handleChange} name="comment" className="search__box" type="text" placeholder= "Comments"></textarea>
+         <input value={this.state.color} onChange={this.handleChange} name="color" className="search__box" type="text" placeholder= "Paint Color" ></input>
+         <input value={this.state.coat} onChange={this.handleChange} name="coat" className="search__box" type="text" placeholder= "# Coat of Paint" ></input>
+         <input value={this.state.comment} onChange={this.handleChange} name="comment" className="search__box" type="text" placeholder= "Comments"></input>
      </div>
      
-     
+     <Link to="/Landordsubmit">
      <div>
-         <button onClick ={() => this.message()}>Search Marketplace</button>
+         <button className="marketplace__search__button">Search Marketplace</button>
      </div>
+     </Link>
 
 <div className="marketplace__steps__div">
      <div>

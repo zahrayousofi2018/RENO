@@ -1,5 +1,5 @@
 .navigation {
-    background-color:  rgb(4, 36, 100);
+    // background-color:  rgb(4, 36, 100);
     padding-left: 40px;
     color: white;
     margin-right: 70%;
@@ -11,6 +11,13 @@
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
+   background-color:  rgb(4, 36, 100);
+   background-image:url("./896669.jpg")
   
    
+}
+
+.reno__logo {
+    color: white;
+
 }

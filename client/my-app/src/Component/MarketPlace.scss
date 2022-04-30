@@ -1,6 +1,12 @@
 .MarketPlace__container {
     margin-right: 40px;
-    margin-left: 40px;
+    margin-left: 120px;
+    // background-color: rgb(196, 209, 234);
+    background-color: white;
+    margin-right: 120px;
+    border-radius: 50px;;
+   
+    
 
 }
 
@@ -19,3 +25,62 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.search__box {
+    border-radius: 20px;
+    border-color: lightblue;
+
+   
+}
+
+.vendor__form__option {
+    border-radius: 20px;
+    padding-right: 50px;
+}
+
+.vendor__detail__container {
+    margin-left: 30px;
+}
+
+.property__detail {
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+.input__container {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.welcome__to__vendor__marketplace {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    
+}
+    
+.navigation {
+padding-left: 50px;
+   
+}
+
+.marketplace__search__button {
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-bottom: 70px;
+
+}
+
+.search__box {
+    margin-left: 100px;
+    margin-right:100px;
+    padding-right: 150px;
+    margin-bottom: 10px;
+}
+
+.marketplace__steps__div {
+    margin-left: 50px;
+    margin-right:50px;
+    padding-bottom: 100px;
+}
+

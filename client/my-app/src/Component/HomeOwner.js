@@ -14,7 +14,7 @@ import MarketPlace from './MarketPlace';
     <div className="HomeOwner__main__div">
 
     <div className="navigation">
-        <Link to="/"><img alt="logo" src='./RENO_LOGO.jpg'/></Link>
+        <Link to="/"><h1 className="reno__logo">RENO</h1></Link>
 
         {/* <Link><h4>Dashboard</h4></Link> */}
         {/* <Link to="/MarketPlace" className="MarketPlace__link"> <h4>Marketplace</h4></Link> */}
