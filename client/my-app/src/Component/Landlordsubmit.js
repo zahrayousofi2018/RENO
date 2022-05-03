@@ -12,7 +12,7 @@ class Landlordsubmit extends Component {
     </div>
 
                  <div className="landlord__submit__container">
-               <h1>Thank you for submitting your request. Your quote is on its way.</h1>
+                  <h1>Thank you for submitting your request. Your quote is on its way.</h1>
                  </div>
 
              </div>

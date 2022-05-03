@@ -99,9 +99,14 @@ class Vendor extends Component {
     return (
       <div className="vendor__main__div">
 
-  
+       <div className="vendor__nav">
       <div className="navigation">
           <Link to="/"> <h1 className="logo">RENO</h1></Link>
+      </div>
+      <div className="navigation">
+        <Link to="/QuotesStatus"><button className="quote__status">Quotes</button> </Link>
+
+      </div>
       </div>
         
       <div className="vendor__div__container">
@@ -110,7 +115,7 @@ class Vendor extends Component {
         <h2 className="vendor__subtitle">Select Jobtype</h2>
         <select onChange={(e) => this.getFilterData(e)}>
             <option className="vendor__form__option" hidden displayed value="N/A"> Please Select</option>
-            <option onChange={() => this.getFilterData()} className="vendor__form__option" value="Jobs">Jobs</option>
+            <option onChange={() => this.getFilterData()} className="vendor__form__option" value="Jobs">All Jobs</option>
             <option  className="vendor__form__option" value="Paint" >Paint</option>
             <option  className="vendor__form__option" value="Cleaning" >Cleaning</option>
             <option  className="vendor__form__option" value="Flooring" >Flooring</option>
@@ -136,7 +141,7 @@ class Vendor extends Component {
                     color={elem.color}
                     coat={elem.coat}
                     comment={elem.comment}
-                  />
+                  /> 
                 ))
               :
                 this.state.jobsArray.map((elem) => (

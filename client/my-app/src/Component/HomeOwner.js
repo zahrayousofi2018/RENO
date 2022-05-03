@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {Switch} from "react-router-dom";
 import MarketPlace from './MarketPlace';
 
+
 // import Dropdown from 'react-dropdown';
 
     class HomeOwner extends Component {
@@ -15,6 +16,10 @@ import MarketPlace from './MarketPlace';
 
     <div className="navigation">
         <Link to="/"><h1 className="reno__logo">RENO</h1></Link>
+        <div className="navigation">
+        <Link to="/LandlordQuotes"><button className="quote__status">Quote Status</button> </Link>
+
+      </div>
 
         {/* <Link><h4>Dashboard</h4></Link> */}
         {/* <Link to="/MarketPlace" className="MarketPlace__link"> <h4>Marketplace</h4></Link> */}

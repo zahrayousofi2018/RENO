@@ -3,6 +3,7 @@ import './Frontpage.scss'
 import {Link} from "react-router-dom";
 // import Navbar from './Component/Navbar'
 
+
 function FrontPage() {
     return (
       <div className="frontpage__container">

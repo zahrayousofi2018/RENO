@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './MarketPlace.scss'
 import axios from 'axios'
 import {Link} from "react-router-dom";
+import Calender from "./Calender";
 
 class MarketPlace extends Component {
   state = {
@@ -100,6 +101,8 @@ class MarketPlace extends Component {
          <input value={this.state.color} onChange={this.handleChange} name="color" className="search__box" type="text" placeholder= "Paint Color" ></input>
          <input value={this.state.coat} onChange={this.handleChange} name="coat" className="search__box" type="text" placeholder= "# Coat of Paint" ></input>
          <input value={this.state.comment} onChange={this.handleChange} name="comment" className="search__box" type="text" placeholder= "Comments"></input>
+         <input value={this.state.date} onChange={this.handleChange} name="date" className="search__box" type="text" placeholder= "Due Date"  ></input>
+         <Calender/>
      </div>
      
      <Link to="/Landordsubmit">

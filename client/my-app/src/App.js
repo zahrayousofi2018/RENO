@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Vendor from './Component/Vendor';
 import Landlordsubmit from './Component/Landlordsubmit';
 import Quote from './Component/Quote'
+import LandlordQuotes from './Component/LandordQuotes';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
          <Route path="/SignUp" component={SignUp} />
          <Route path="/Landlordsubmit" component={Landlordsubmit}/>
          <Route path="/Quote" component={Quote}/>
+         <Route path="/LandlordQuotes" component={LandlordQuotes}/>
         </Switch>
         {/* <SignUp/>  */}
         </BrowserRouter>
