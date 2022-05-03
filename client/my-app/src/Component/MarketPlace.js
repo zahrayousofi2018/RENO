@@ -102,8 +102,10 @@ class MarketPlace extends Component {
          <input value={this.state.coat} onChange={this.handleChange} name="coat" className="search__box" type="text" placeholder= "# Coat of Paint" ></input>
          <input value={this.state.comment} onChange={this.handleChange} name="comment" className="search__box" type="text" placeholder= "Comments"></input>
          <input value={this.state.date} onChange={this.handleChange} name="date" className="search__box" type="text" placeholder= "Due Date"  ></input>
-         <Calender/>
+       
      </div>
+
+     <Calender/>
      
      <Link to="/Landordsubmit">
      <div>

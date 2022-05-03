@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import "./Quote.scss"
 import {Link} from "react-router-dom";
+import ImageSlider from './ImageSlider';
+import {SliderData} from './SlideData';
 
 
 class Quote extends Component {
@@ -19,6 +21,10 @@ class Quote extends Component {
              <h1 className="quote__subtitle"> Quotes</h1>
 
             <div className="quote__main__div">
+
+                 <div>
+                      <ImageSlider slides={SliderData}/>
+                 </div>
 
                <div className="quote__container">
                <h4 className="quote__marketprice__header">Market Price for Similar Jobs</h4>
