@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import './MarketPlace.scss'
 import axios from 'axios'
 import {Link} from "react-router-dom";
-import Calender from "./Calender";
+// import Calender from "./Calender";
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
+import "./Calender.scss";
 
 class MarketPlace extends Component {
   state = {
@@ -21,7 +24,7 @@ class MarketPlace extends Component {
       coat: "",
       comment: "",
       quote: "",
-
+      date: new Date(),
   }
     handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value},
@@ -54,10 +57,20 @@ class MarketPlace extends Component {
             coat: this.state.coat,
             comment: this.state.comment,
             quote: this.state.quote,
+            date: this.state.date,
       
            
         });
     };
+
+  
+   onChange = date => {
+       this.setState({date}
+       )
+    }
+
+
+    
 
     
     render(){      
@@ -101,11 +114,13 @@ class MarketPlace extends Component {
          <input value={this.state.color} onChange={this.handleChange} name="color" className="search__box" type="text" placeholder= "Paint Color" ></input>
          <input value={this.state.coat} onChange={this.handleChange} name="coat" className="search__box" type="text" placeholder= "# Coat of Paint" ></input>
          <input value={this.state.comment} onChange={this.handleChange} name="comment" className="search__box" type="text" placeholder= "Comments"></input>
-         <input value={this.state.date} onChange={this.handleChange} name="date" className="search__box" type="text" placeholder= "Due Date"  ></input>
-       
+         <input value={this.state.date} name="date" className="search__box" type="text" placeholder= "Due Date"  ></input>
+         <Calendar onChange={(e)=>{this.onChange(e)}} value={this.state.date}/>
+          {this.state.date.toDateString()}
+         
      </div>
 
-     <Calender/>
+     
      
      <Link to="/Landordsubmit">
      <div>

@@ -19,12 +19,13 @@ class Quote extends Component {
 
 
              <h1 className="quote__subtitle"> Quotes</h1>
+             <div>
+                      <ImageSlider slides={SliderData}/>
+                 </div>
 
             <div className="quote__main__div">
 
-                 <div>
-                      <ImageSlider slides={SliderData}/>
-                 </div>
+                 
 
                <div className="quote__container">
                <h4 className="quote__marketprice__header">Market Price for Similar Jobs</h4>
