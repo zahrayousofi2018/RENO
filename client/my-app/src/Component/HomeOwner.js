@@ -1,37 +1,32 @@
 import React, {Component} from 'react';
 import './HomeOwner.scss'
 import {Link} from "react-router-dom";
-import {Switch} from "react-router-dom";
+
 import MarketPlace from './MarketPlace';
 
 
-// import Dropdown from 'react-dropdown';
+
 
     class HomeOwner extends Component {
   
     render(){  
     return (  
-    // <div>
+ 
     <div className="HomeOwner__main__div">
 
-    <div className="navigation">
+        <div className="nav">
+            <div className="nav__container">
         <Link to="/"><h1 className="reno__logo">RENO</h1></Link>
-        <div className="navigation">
-        <Link to="/LandlordQuotes"><button className="quote__status">Quote Status</button> </Link>
-
-      </div>
-
-        {/* <Link><h4>Dashboard</h4></Link> */}
-        {/* <Link to="/MarketPlace" className="MarketPlace__link"> <h4>Marketplace</h4></Link> */}
-        {/* <Link> <h4>Quotes </h4></Link> */}
-    </div>
+        </div>
+        <div className="nav__container">
+        <Link to="/LandlordQuotes"><button className="quote__status">Quote Status</button> </Link>  
+          </div>  
+        </div>
 
     <div className="dyanmicPageContent">
-        <Switch>
-            {/* <Route path="/MarketPlace" component={MarketPlace}/> */}
+      
             <MarketPlace/>
-            {/* <Route path="/home" component={Home}/>  */}
-        </Switch>
+      
     </div>
 
  </div>

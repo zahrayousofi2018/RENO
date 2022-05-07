@@ -17,7 +17,9 @@ render() {
           
          <h1 className="landlord__quote__subtitle">Quote Status</h1>
           <div className="landlordQuote__container">
-              
+         
+
+           
          
 
           </div>

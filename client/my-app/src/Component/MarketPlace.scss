@@ -3,9 +3,24 @@
     margin-left: 120px;
     // background-color: rgb(196, 209, 234);
     background-color: white;
+    opacity: 0.94;
     margin-right: 120px;
     border-radius: 50px;;
    
+    @media (min-width:480px) and (max-width:767px) { 
+     margin-right: 20px;
+     margin-left: 20px;
+
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
     
 
 }
@@ -13,54 +28,168 @@
 
 .marketplace__steps {
  border-radius: 100%;
- background-color: #3366BB;
- border-color: #3366BB;
+ background-color: rgb(42, 42, 255);
+ border-color: rgb(42, 42, 255);
  color: white;
  padding-right: 10px;
  padding-left: 10px;
+ @media (min-width:480px) and (max-width:767px) { 
+   
+  
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 }
 
 
 .marketplace__steps__div {
     display: flex;
     justify-content: space-evenly;
-}
-
-.search__box {
-    border-radius: 20px;
-    border-color: lightblue;
-
+    @media (min-width:480px) and (max-width:767px) { 
    
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
 }
+
+@media(min-width: 1280px) {
+
+}
+}
+
+// .search__box {
+//     border-radius: 10px;
+//     border-color: rgb(42, 42, 255);
+    
+//     @media (min-width:480px) and (max-width:767px) { 
+ 
+//     margin-right: 10px;
+//     margin-left: 10px;
+    
+//     }
+   
+//     @media (min-width: 768px) and (max-width: 1279px) {
+
+// }
+
+// @media(min-width: 1280px) {
+
+// }
+// }
 
 .vendor__form__option {
     border-radius: 20px;
     padding-right: 50px;
+    @media (min-width:480px) and (max-width:767px) { 
+    margin-right: 10px;
+    margin-left: 10px;
+ 
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 }
 
 .vendor__detail__container {
     margin-left: 30px;
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 }
 
 .property__detail {
     margin-left: 150px;
     margin-top: 50px;
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 }
 
 .input__container {
     margin-top: 40px;
     margin-left: 40px;
     margin-right: 40px;
+    @media (min-width:480px) and (max-width:767px) { 
+    margin-right: 10px;
+    margin-left: 10px;
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 }
 
 .welcome__to__vendor__marketplace {
     padding-top: 50px;
     padding-bottom: 30px;
-    
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(42, 42, 255);
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 }
     
 .navigation {
 padding-left: 50px;
+@media (min-width:480px) and (max-width:767px) { 
+   
+  
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
    
 }
 
@@ -68,6 +197,18 @@ padding-left: 50px;
     margin-top: 50px;
     margin-left: 150px;
     margin-bottom: 70px;
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 
 }
 
@@ -76,11 +217,146 @@ padding-left: 50px;
     margin-right:100px;
     padding-right: 150px;
     margin-bottom: 10px;
+    border-color: rgb(42, 42, 255);
+    border-radius: 10px;
+    @media (min-width:480px) and (max-width:767px) { 
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 70vw;
+
+   
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
 }
 
 .marketplace__steps__div {
-    margin-left: 50px;
-    margin-right:50px;
+    margin-left: 80px;
+    margin-right:80px;
     padding-bottom: 100px;
+    @media (min-width:480px) and (max-width:767px) { 
+    margin-right: 40px;
+    margin-left: 40px;
+    display: inline-block;
+    padding-bottom: 20px;
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
 }
 
+@media(min-width: 1280px) {
+
+}
+    
+}
+
+.calendar {
+    margin-left: 100px;
+    @media (min-width:480px) and (max-width:767px) { 
+    margin-left: 40px;
+    margin-right: 40px;
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
+}
+
+.marketplace__search__button {
+    color: white;
+    background-color: rgb(42, 42, 255);
+    border-radius: 10px;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: rgb(42, 42, 255);
+    @media (min-width:480px) and (max-width:767px) { 
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 70vw;
+    font-size: 1.3rem;;
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
+}
+
+.vendor__list {
+    padding-left: 10px;
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
+}
+
+.vendor__form__option {
+    border-radius: 15px;
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
+}
+
+.vendor__list__item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 100px;
+    border-radius: 10px;
+    border-color: rgb(42, 42, 255);
+    @media (min-width:480px) and (max-width:767px) { 
+    margin-right: 40px;
+    margin-left: 40px;
+    width: 70vw;
+    
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
+
+
+}

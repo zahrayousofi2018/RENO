@@ -28,7 +28,9 @@ export default class Vendorlist extends Component {
 
             <tr className="vendorlist__row" id={id}>
              
+             <div className="vendor__div">
              <td className="vendorlist__jobtype">
+               
               <h4 className="vendorlist__subtitle">Job Type</h4>
               <Link to="/Quote">
               <p className="vendorlist__text">
@@ -36,6 +38,7 @@ export default class Vendorlist extends Component {
               </p>
               </Link>
             </td>
+           
 
 
             <td className="vendorlist__unit">
@@ -145,7 +148,7 @@ export default class Vendorlist extends Component {
 
 
 
-           
+           </div>
     
             
           </tr>

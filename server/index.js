@@ -60,9 +60,25 @@ app.post('/reno', (req, res) => {
        console.log('complete');
    })
    res.status(200).send(req.body)
-
-     
+  
 });
+
+
+// app.delete("/reno", (req, res) => {
+//     // let fullInventoryData = pullData(inventoryList);
+//     let id = req.params.id;
+//     let index = newJob.findIndex((job.id) => job.id === id);
+//     let deletedJob = newJob.splice(index, 1);
+//     newJob.splice(index, 1);
+  
+//     let jobSrc = JSON.stringify(newJob, null, 2);
+//     fs.writeFile('./data/reno.json', jobSrc, "utf8", function (err) {
+//       if (err) throw err;
+//     });
+  
+//     res.send(deletedJob);
+//   });
+
 
 
 
