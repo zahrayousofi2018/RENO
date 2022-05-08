@@ -128,7 +128,7 @@ class MarketPlace extends Component {
          <input value={this.state.sqft} onChange={this.handleChange} name="sqft" className="search__box" type="text" placeholder= "Area sq.ft" ></input>
          <input value={this.state.color} onChange={this.handleChange} name="color" className="search__box" type="text" placeholder= "Paint Color" ></input>
          <input value={this.state.coat} onChange={this.handleChange} name="coat" className="search__box" type="text" placeholder= "# Coat of Paint" ></input>
-         <input value={this.state.comment} onChange={this.handleChange} name="comment" className="search__box" type="text" placeholder= "Comments"></input>
+         {/* <input value={this.state.comment} onChange={this.handleChange} name="comment" className="search__box" type="text" placeholder= "Comments"></input> */}
          <input value={this.state.date} name="date" className="search__box" type="text" placeholder= "Due Date"  ></input>
          <div className="calendar">
          <Calendar  onChange={(e)=>{this.onChange(e)}} value={this.state.date}/>

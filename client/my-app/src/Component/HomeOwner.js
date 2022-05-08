@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import './HomeOwner.scss'
 import {Link} from "react-router-dom";
-
+import {AiOutlineHome } from 'react-icons/ai'
 import MarketPlace from './MarketPlace';
-
-
 
 
     class HomeOwner extends Component {
@@ -16,11 +14,15 @@ import MarketPlace from './MarketPlace';
 
         <div className="nav">
             <div className="nav__container">
-        <Link to="/"><h1 className="reno__logo">RENO</h1></Link>
+                <div class="reno__logo">
+            
+             <Link to="/"> <AiOutlineHome className="reno__logo"/> <h1 className="reno__logo">RENO</h1>  </Link>
+                </div>
+      
         </div>
         <div className="nav__container">
         <Link to="/LandlordQuotes"><button className="quote__status">Quote Status</button> </Link>  
-          </div>  
+        </div>  
         </div>
 
     <div className="dyanmicPageContent">

@@ -12,11 +12,34 @@
     padding-right: 40px;
     border-radius: 20px;
     margin-bottom: 50px;
+
+    @media (min-width:480px) and (max-width:767px) { 
+     margin-right: 20px;
+     margin-left: 20px;
+     width: 70vw;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+     
+
+    }
+
+    @media(min-width: 1280px) {
+
+
+    }
+
+
 }
 
 .quote__container {
     margin-left: 30px;
     padding-top: 20px;
+   
 
 }
 
@@ -32,10 +55,13 @@
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 20px;
+ 
+
 }
 
 .quote__marketprice__header {
    font-size: 1rem;
+  
 }
 
 .quote__data {
@@ -44,7 +70,7 @@
 }
 
 .search__box {
-    padding-left: 40px;
+    padding-left: 30px;
 }
 
 

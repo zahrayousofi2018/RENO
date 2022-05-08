@@ -1,9 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
 const data = require('./data/reno.json');
+const quoteData = require ('./data/quote.json');
 const fs = require("fs");
+// const { ppid } = require('process');
+
 // const { v1: uuidv1, v4: uuidv4 } = require("uuid");
 
 
@@ -17,7 +20,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/static', express.static('public'))
+app.use('/static', express.static('public'));
 
 // require('dotenv').config();
 const PORT = process.env.PORT || 9000;
@@ -27,6 +30,7 @@ const PORT = process.env.PORT || 9000;
 app.get("/reno", (req, res)=> {
     res.json(data);
 });
+
 
 app.post('/reno', (req, res) => {
     // const fullJobData = pullData(data);
@@ -62,6 +66,31 @@ app.post('/reno', (req, res) => {
    res.status(200).send(req.body)
   
 });
+
+app.get ('/quote', (req, res) => {
+    res.json(quoteData)
+});
+
+
+
+app.post ('/quote', (req, res) => {
+  let body = req.body;
+  const newQuote = {
+      id: req.body.id,
+      quote: req.body.quote,
+  }
+  quoteData.push(newQuote);
+
+  var quoteSrc = JSON.stringify(quoteData);
+  fs.writeFile('./data/quote.json', quoteSrc, 'utf8', function (err) {
+      if (err) throw err;
+      console.log("complete quote");
+  })
+   res.status(200).send(req.body)
+
+} ) 
+
+
 
 
 // app.delete("/reno", (req, res) => {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './Vendorlist.scss'
-import {Link} from "react-router-dom"; 
+import {Link, Redirect} from "react-router-dom"; 
 
 
 export default class Vendorlist extends Component {
@@ -24,6 +24,7 @@ export default class Vendorlist extends Component {
             coat,
             // comment,
              } = this.props;
+          
         return(
 
             <tr className="vendorlist__row" id={id}>
@@ -132,9 +133,13 @@ export default class Vendorlist extends Component {
 
             <td>
               <h3 className="vendorlist__subtitle">Status</h3>
-              <Link to="/Quote"> 
+              <Link to={{
+              pathname: '/Quote',
+                id:id }
+              }>
              <button type="submit" className="Accept">Accept Job</button>
-             </Link>
+                  
+              </Link>
 
              <Link >
            

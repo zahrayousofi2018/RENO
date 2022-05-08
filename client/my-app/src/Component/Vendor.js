@@ -4,8 +4,6 @@ import {Link} from "react-router-dom";
 import "./Vendor.scss"
 import Vendorlist from "./Vendorlist";
 
-
-
 class Vendor extends Component {
     state ={
         jobsArray: [],
@@ -80,14 +78,6 @@ class Vendor extends Component {
         })
 
        }
-
-      //  if (e.target.value === "Jobs") {
-      //    this.setState({
-      //     ...this.state,
-      //     jobsArray: filteredData
-      //   })
-
-      //  }
     
     }
 
@@ -99,20 +89,22 @@ class Vendor extends Component {
     return (
       <div className="vendor__main__div">
 
-       <div className="vendor__nav">
-      <div className="navigation">
+       <div className="nav">
+      <div className="nav__container">
           <Link to="/"> <h1 className="logo">RENO</h1></Link>
       </div>
-      <div className="navigation">
+      <div className="nav__container">
         <Link to="/QuotesStatus"><button className="quote__status">Quotes</button> </Link>
 
       </div>
+
+      
       </div>
         
       <div className="vendor__div__container">
         <h1 className="vendor__dashboard" >Welcome to Vendor Dashboard</h1>
 
-        <h2 className="vendor__subtitle">Select Jobtype</h2>
+        <div className="option__container">
         <select onChange={(e) => this.getFilterData(e)}>
             <option className="vendor__form__option" hidden displayed value="N/A"> Please Select</option>
             <option onChange={() => this.getFilterData()} className="vendor__form__option" value="Jobs">All Jobs</option>
@@ -121,6 +113,7 @@ class Vendor extends Component {
             <option  className="vendor__form__option" value="Flooring" >Flooring</option>
             <option  className="vendor__form__option" value="Renovation">Full House Renovation</option>
           </select>
+        </div>
 
           <tr className="joblist__row">
           </tr> 
