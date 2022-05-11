@@ -93,20 +93,21 @@ app.post ('/quote', (req, res) => {
 
 
 
-// app.delete("/reno", (req, res) => {
-//     // let fullInventoryData = pullData(inventoryList);
-//     let id = req.params.id;
-//     let index = newJob.findIndex((job.id) => job.id === id);
-//     let deletedJob = newJob.splice(index, 1);
-//     newJob.splice(index, 1);
+app.delete("/:id", (req, res) => {
+    // let JobData = pullData(data);
+    let id = req.params.id;
+    let index = data.findIndex((job) => job.id === id);
+    let deletedJob = data.splice(index, 1);
+    data.splice(index, 1);
   
-//     let jobSrc = JSON.stringify(newJob, null, 2);
-//     fs.writeFile('./data/reno.json', jobSrc, "utf8", function (err) {
-//       if (err) throw err;
-//     });
+    let jobSrc = JSON.stringify(data, null, 2);
+    fs.writeFile('./data/reno.json', jobSrc, "utf8", function (err) {
+      if (err) throw err;
+    });
   
-//     res.send(deletedJob);
-//   });
+    res.send(deletedJob);
+    console.log("job deleted")
+  });
 
 
 

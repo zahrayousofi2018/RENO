@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './Vendorlist.scss'
-import {Link, Redirect} from "react-router-dom"; 
+import {Link} from "react-router-dom"; 
 
 
 export default class Vendorlist extends Component {
@@ -74,7 +74,7 @@ export default class Vendorlist extends Component {
                 {status}{" "}
               </p> */}
 
-              <p className="vendorlist__subtitle">
+              <p className="vendorlist__text">
 
             {city}
             </p>

@@ -2,21 +2,44 @@ import React, {Component} from 'react';
 import './LandlordQuotes.scss'
 import {Link} from "react-router-dom";
 import axios from 'axios';
-// import Vendorlist from "./Vendorlist";
+import Vendorlist from "./Vendorlist";
 
 class LandlordQuote extends Component {
-  state ={
-    quoteArray: [],
-  }
-  componentDidMount () {
+    state = {
+      jobsArray: [],
+      quotes: [],
+      quote: {
+        id: "",
+        quote: "",
+   },
+    }
+
+    componentDidMount () {
+    
+    axios
+    .get ('http://localhost:9000/reno')
+    .then((response) => {
+      console.log(response)
+      this.setState({jobsArray:response.data})
+       return response.data
+    });
+
     axios
     .get ('http://localhost:9000/quote')
     .then((response) => {
       console.log(response)
-      this.setState({quoteArray:response.data})
+      this.setState({quotes:response.data})
        return response.data
     })
-}
+
+  }
+
+
+
+//get request for reno 
+// get request for quote 
+
+//if statement (for every quote, get the id - if the id exist in reno, get. If not, null)
 
 
 render() {
@@ -25,15 +48,14 @@ render() {
 
 <div className="navigation">
         <Link to="/"><h1 className="reno__logo">RENO</h1></Link>
-     {this.state.quoteArray}
-       
-
+    
       </div>
           
          <h1 className="landlord__quote__subtitle">Quote Status</h1>
           <div className="landlordQuote__container">
-         
-          {/* {this.state.jobsArray.map((elem) => (
+            
+          
+            {this.state.jobsArray.map((elem) => (
                   <Vendorlist
                     id={elem.id}
                     address={elem.address}
@@ -46,23 +68,14 @@ render() {
                     rooms={elem.rooms}
                     bathroom={elem.bathroom}
                     sqft={elem.sqft}
-                    color={elem.color}
-                    coat={elem.coat}
-                    comment={elem.comment}
-                    quote={elem.quote}
+                    quotes={elem.quote}
+                   
                   />
-                ))} */}
-           
-         
+                ))}
+
 
           </div>
            
-
-
-
-
-
-
 
         </div>
     )

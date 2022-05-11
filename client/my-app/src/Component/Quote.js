@@ -18,7 +18,6 @@ class Quote extends Component{
           axios
           .get ('http://localhost:9000/quote')
           .then((response) => {
-          //   console.log(response)
             this.setState({quotes:response.data})
              return response.data
           })
@@ -27,16 +26,13 @@ class Quote extends Component{
 
       handleSubmit =(e) => {
            e.preventDefault()
-           console.log(this.state.quote)
-          //  console.log("Hello")  
-          //  console.log(e)              
+           console.log(this.state.quote)           
                axios.post(`http://localhost:9000/quote`, {   
                     id: this.state.quote.id,
                     quote: this.state.quote.quote,
               // ...this.state.quote,
                })
 
-          //     console.log(this.state.quotes) 
            }
 
            handleChange = (event) => {

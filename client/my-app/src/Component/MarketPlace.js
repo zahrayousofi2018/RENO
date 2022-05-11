@@ -85,6 +85,8 @@ class MarketPlace extends Component {
 //        });
 //    };
 
+ 
+
     
     render(){ 
         console.log(this.state.seen)     
@@ -155,7 +157,7 @@ class MarketPlace extends Component {
      {/* </Link> */}
      </form>
 
-     {this.state.seen ? <PopUp toggle={this.togglePop} /> : null}
+     {this.state.seen ? <PopUp toggle={this.togglePop}  /> : null}
 
 <div className="marketplace__steps__div">
      <div>
