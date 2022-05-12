@@ -94,7 +94,7 @@ class Vendor extends Component {
           <Link to="/"> <h1 className="logo">RENO</h1></Link>
       </div>
       <div className="nav__container">
-        <Link to="/QuotesStatus"><button className="quote__status">Quotes</button> </Link>
+        <Link to="/Quote"><button className="quote__status">Quotes</button> </Link>
 
       </div>
 

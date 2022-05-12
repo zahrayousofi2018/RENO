@@ -12,8 +12,8 @@ class LandlordQuote extends Component {
         id: "",
         quote: "",
    },
-    }
-
+  }
+  
     componentDidMount () {
     
     axios
@@ -33,6 +33,18 @@ class LandlordQuote extends Component {
     })
 
   }
+
+   getQuote = () => {
+  
+
+    if (this.state.jobsArray.id === this.state.quotes.id) {
+       console.log("HI")
+       console.log(this.state.quotes[0].quote)
+    }
+
+  }
+
+
 
 
 
@@ -54,7 +66,8 @@ render() {
          <h1 className="landlord__quote__subtitle">Quote Status</h1>
           <div className="landlordQuote__container">
             
-          
+           
+{/*          
             {this.state.jobsArray.map((elem) => (
                   <Vendorlist
                     id={elem.id}
@@ -71,9 +84,11 @@ render() {
                     quotes={elem.quote}
                    
                   />
-                ))}
+                ))} 
 
+                {this.state.quotes.quote}
 
+               {this.getQuote} */}
           </div>
            
 

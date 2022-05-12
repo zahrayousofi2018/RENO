@@ -29,7 +29,7 @@ export default class Vendorlist extends Component {
 
             <tr className="vendorlist__row" id={id}>
              
-             <div className="vendor__div">
+             {/* <div className="vendor__div"> */}
              <td className="vendorlist__jobtype">
                
               <h4 className="vendorlist__subtitle">Job Type</h4>
@@ -120,15 +120,7 @@ export default class Vendorlist extends Component {
               <p className="vendorlist__text">{coat}</p>
             </td>
 
-            {/* <td className="vendorlist__comment">
-              <h4 className="vendorlist__subtitle">Comment</h4>
-              <p className="vendorlist__text">{comment}</p>
-            </td> */}
-
-            {/* <td className="vendorlist__quote">
-              <h4 className="vendorlist__subtitle">Quote</h4>
-              <p className="vendorlist__text">{quote}</p>
-            </td> */}
+           
 
 
             <td>
@@ -146,6 +138,8 @@ export default class Vendorlist extends Component {
              <button type="submit" className="Decline">Decline Job</button>
              </Link>
              </td>
+
+            
           
           
           
@@ -153,7 +147,7 @@ export default class Vendorlist extends Component {
 
 
 
-           </div>
+           {/* </div> */}
     
             
           </tr>
