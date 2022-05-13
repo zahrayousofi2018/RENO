@@ -22,6 +22,7 @@ export default class Vendorlist extends Component {
             sqft,
             color,
             coat,
+            quote,
             // comment,
              } = this.props;
           
@@ -119,6 +120,11 @@ export default class Vendorlist extends Component {
               <h4 className="vendorlist__subtitle">Paint Coat</h4>
               <p className="vendorlist__text">{coat}</p>
             </td>
+
+            {quote && (<td className="vendorlist__paint">
+              <h4 className="vendorlist__subtitle">Quote</h4>
+              <p className="vendorlist__text">{quote}</p>
+            </td>)}
 
            
 

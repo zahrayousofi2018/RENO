@@ -34,19 +34,37 @@ class LandlordQuote extends Component {
 
   }
 
+  //  isAvailable = (id) => {
+  //    // loop thorugh the jobarry /reno 
+  //    ///print all ids of job array 
+  //    this.state.jobsArray.map((elem) => (
+  //      console.log("zahra", elem.id)
+  //    ))
+      
+      
+  //  }
+
    getQuote = () => {
-  
 
-    if (this.state.jobsArray.id === this.state.quotes.id) {
-       console.log("HI")
-       console.log(this.state.quotes[0].quote)
-    }
+    let quoteAndJob = []
+   
+    this.state.quotes.map( (quotesElem) => {
 
-  }
-
-
-
-
+      this.state.jobsArray.map((elem) => {
+        if(quotesElem.id ===elem.id ){
+          quoteAndJob.push({
+            ...quotesElem,
+            ...elem
+          })
+        }
+      
+     // );   
+      });
+  });
+   
+  // console.log('quoteAndJob===', quoteAndJob);
+  return quoteAndJob;
+}
 
 //get request for reno 
 // get request for quote 
@@ -66,9 +84,10 @@ render() {
          <h1 className="landlord__quote__subtitle">Quote Status</h1>
           <div className="landlordQuote__container">
             
-           
-{/*          
-            {this.state.jobsArray.map((elem) => (
+            
+           {/* {this.getQuote()} */}
+         
+            {this.getQuote().map((elem) => (
                   <Vendorlist
                     id={elem.id}
                     address={elem.address}
@@ -81,14 +100,14 @@ render() {
                     rooms={elem.rooms}
                     bathroom={elem.bathroom}
                     sqft={elem.sqft}
-                    quotes={elem.quote}
+                    quote={elem.quote}
                    
                   />
                 ))} 
 
-                {this.state.quotes.quote}
+            
 
-               {this.getQuote} */}
+           
           </div>
            
 
