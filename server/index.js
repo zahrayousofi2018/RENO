@@ -5,9 +5,9 @@ const cors = require('cors');
 const data = require('./data/reno.json');
 const quoteData = require ('./data/quote.json');
 const fs = require("fs");
-// const { ppid } = require('process');
 
-// const { v1: uuidv1, v4: uuidv4 } = require("uuid");
+
+const { v1: uuidv1, v4: uuidv4 } = require("uuid");
 
 
 app.use(bodyParser.json());
@@ -37,7 +37,9 @@ app.post('/reno', (req, res) => {
     let body = req.body;
     
     const newJob = 
-    {id: data.length +1,
+    {
+        id: data.length +1,
+        id: uuidv1(),
     // vendorID: uuidv4(),
     jobtype: req.body.jobtype,
     unit: req.body.unit, 

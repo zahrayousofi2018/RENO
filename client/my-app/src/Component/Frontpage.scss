@@ -3,6 +3,21 @@
 //    padding-top: 250px;
    padding-left: 40px;
    padding-bottom: 40px;
+
+@media (min-width:480px) and (max-width:767px) { 
+   
+  
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+
+
+}
+
+@media(min-width: 1280px) {
+
+
+}
 }
 
 .frontpage__message {
@@ -10,6 +25,20 @@
     margin-right: 20px;
     color: white;
     padding-left: 40px;
+
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+    
+    @media (min-width: 768px) and (max-width: 1279px) {
+    
+
+    }
+    
+    @media(min-width: 1280px) {
+    
+    }
 }
 
 .frontpage__container {
@@ -20,6 +49,20 @@
     // background-size: cover;
     background-color: rgb(18, 18, 54);
     height: 100%; 
+
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+    
+    @media (min-width: 768px) and (max-width: 1279px) {
+    
+
+    }
+    
+    @media(min-width: 1280px) {
+    
+    }
 
     
 }
@@ -33,6 +76,19 @@
     background-color: rgb(18, 18, 54);
     border-color:white;
     padding-bottom: 5px;
+
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+    
+    @media (min-width: 768px) and (max-width: 1279px) {
+    
+    }
+    
+    @media(min-width: 1280px) {
+    
+    }
 }
 
 .SignUp {
@@ -46,4 +102,48 @@
     color: white;
     padding-bottom: 5px;
     margin-bottom: 100px;
+
+    @media (min-width:480px) and (max-width:767px) { 
+   
+  
+    }
+    
+    @media (min-width: 768px) and (max-width: 1279px) {
+    
+    }
+    
+    @media(min-width: 1280px) {
+    
+    }
+}
+
+
+.reno {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 40px;
+    @media (min-width:480px) and (max-width:767px) { 
+     padding-left: 40px;
+    padding-bottom: 80px;
+  
+    }
+    
+    @media (min-width: 768px) and (max-width: 1279px) {
+    
+
+    }
+    
+    @media(min-width: 1280px) {
+    
+    }
+
+}
+
+.reno___logo {
+    margin-left: 35px;
+    
+    width: 5rem;
+    height: 3rem;
+    color: white;
+   
 }

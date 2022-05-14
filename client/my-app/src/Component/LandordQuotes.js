@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import './LandlordQuotes.scss'
 import {Link} from "react-router-dom";
 import axios from 'axios';
-import Vendorlist from "./Vendorlist";
+import LandlordQuoteList from "./LandlordQuoteList";
+import {AiOutlineHome } from 'react-icons/ai'
+
 
 class LandlordQuote extends Component {
     state = {
@@ -34,15 +36,7 @@ class LandlordQuote extends Component {
 
   }
 
-  //  isAvailable = (id) => {
-  //    // loop thorugh the jobarry /reno 
-  //    ///print all ids of job array 
-  //    this.state.jobsArray.map((elem) => (
-  //      console.log("zahra", elem.id)
-  //    ))
-      
-      
-  //  }
+  
 
    getQuote = () => {
 
@@ -51,7 +45,7 @@ class LandlordQuote extends Component {
     this.state.quotes.map( (quotesElem) => {
 
       this.state.jobsArray.map((elem) => {
-        if(quotesElem.id ===elem.id ){
+        if(quotesElem.id ===elem.id ) {
           quoteAndJob.push({
             ...quotesElem,
             ...elem
@@ -62,14 +56,9 @@ class LandlordQuote extends Component {
       });
   });
    
-  // console.log('quoteAndJob===', quoteAndJob);
+
   return quoteAndJob;
 }
-
-//get request for reno 
-// get request for quote 
-
-//if statement (for every quote, get the id - if the id exist in reno, get. If not, null)
 
 
 render() {
@@ -77,6 +66,7 @@ render() {
         <div className="LandlordQuote">
 
 <div className="navigation">
+<AiOutlineHome className="reno__logo"/>
         <Link to="/"><h1 className="reno__logo">RENO</h1></Link>
     
       </div>
@@ -85,10 +75,8 @@ render() {
           <div className="landlordQuote__container">
             
             
-           {/* {this.getQuote()} */}
-         
             {this.getQuote().map((elem) => (
-                  <Vendorlist
+                  <LandlordQuoteList
                     id={elem.id}
                     address={elem.address}
                     unit={elem.unit}
