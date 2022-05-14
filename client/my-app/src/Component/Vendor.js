@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import "./Vendor.scss"
 import Vendorlist from "./Vendorlist";
+import {AiOutlineHome } from 'react-icons/ai'
 
 class Vendor extends Component {
     state ={
@@ -91,6 +92,7 @@ class Vendor extends Component {
 
        <div className="nav">
       <div className="nav__container">
+      <AiOutlineHome className="reno__logo"/>
           <Link to="/"> <h1 className="logo">RENO</h1></Link>
       </div>
       <div className="nav__container">

@@ -69,8 +69,35 @@
     padding-left: 40px;
 }
 
-.search__box {
+.search___box {
     padding-left: 30px;
+    border-color: blue;
+    padding-left: 40px;
+    margin-left: 40px;
+    padding-right: 40px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+
+    @media (min-width:480px) and (max-width:767px) { 
+     margin-right: 20px;
+     margin-left: 20px;
+     width: 70vw;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     
+  
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+     
+
+    }
+
+    @media(min-width: 1280px) {
+
+
+    }
+    
 }
 
 
@@ -80,6 +107,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width:480px) and (max-width:767px) { 
+    height: 70vh;
+    
+    }
+   
+    @media (min-width: 768px) and (max-width: 1279px) {
+
+   }
+
+    @media(min-width: 1280px) {
+
+
+   } 
 }
 
 .image {

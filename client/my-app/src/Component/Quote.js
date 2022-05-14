@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import ImageSlider from './ImageSlider';
 import {SliderData} from './SlideData';
 import axios from "axios";
+import {AiOutlineHome } from 'react-icons/ai'
 
 class Quote extends Component{
      state ={
@@ -56,6 +57,7 @@ class Quote extends Component{
         return (
         <div className="Quotes__container">
         <div className="navigation">
+        <AiOutlineHome className="reno__logo"/>
              <Link to="/"> <h1 className="logo">RENO</h1></Link>
         </div>
              <h1 className="quote__subtitle"> Quotes</h1>
@@ -77,13 +79,13 @@ class Quote extends Component{
                <h4 className="quote__marketprice__header">Recommended Price</h4>
                <p className="quote__data">$2050</p>
 
-
-               {/* <div className="quote__input"> */}
-              
-               <input onChange={this.handleChange} name="quote" className="search__box" type="text" placeholder= "Quote" ></input>
-               {/* </div> */}
                </div>
-             <div>
+               {/* <div className="quote__input"> */}
+               <div >
+               <input onChange={this.handleChange} name="quote" className="search___box" type="text" placeholder= "Quote" ></input>
+               {/* </div> */}
+              
+       
              {/* <Link to="/Vendor" > */}
              <button onClick={(e) => this.handleSubmit(e)} type="submit" className="submit__quote">Submit Quote</button>
           
